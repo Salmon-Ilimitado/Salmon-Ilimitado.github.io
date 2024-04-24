@@ -308,6 +308,9 @@
 .separator.separator-gray{
     background-color: #EEEEEE;
 }
+.separator.separator-dark{
+    background-color: #000000;
+}
 .social-buttons-demo .btn{
     margin-right: 5px;
     margin-bottom: 7px;
