@@ -193,6 +193,10 @@ a:hover {
   color: #e78b90 !important;
 }
 
+.text-dark {
+  color: #000000 !important;
+}
+
 .text-gold,
 .title-gold {
   color: #c5a47e;
@@ -246,6 +250,13 @@ a:hover {
 }
 .separator-danger:before, .separator-danger:after {
   border-color: #e78b90;
+}
+
+.separator-dark {
+  color: #000000;
+}
+.separator-dark:before, .separator-dark:after{
+  border-color: #000000;
 }
 
 p.description {
