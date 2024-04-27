@@ -1,4 +1,4 @@
-.galeria h1{
+.galeria h1 {
     color: white;
     text-shadow: 1px -2px 2px black, 0 0 25px blue, 0 0 5px blue;
     text-align: center;
@@ -10,11 +10,11 @@ div.galeria {
     width: 80%; /* Cambia el ancho del contenedor */
     display: flex; /* Usa flexbox para alinear las imágenes */
     justify-content: center; /* Centra las imágenes horizontalmente */
-    flex-direction: column; /* Cambia la dirección del flexbox a vertical */
+    align-items: center; /* Centra las imágenes verticalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan si no caben en una sola fila */
 }
 
 div.galeria .foto {
-    width: auto; /* Establece un ancho automático para cada contenedor de imagen */
     margin-right: 10px; /* Espacio horizontal entre los contenedores de las fotos */
 }
 
@@ -23,17 +23,13 @@ div.galeria img {
     height: auto; /* Mantiene la proporción de aspecto */
 }
 
-
-
-
-
-div.galeria:hover{
+div.galeria:hover {
     border: 1px solid lightcoral;
     transform: rotate(-3deg);
-
 }
 
-div.pie{
+div.pie {
     text-align: center;
     padding: 10px;
 }
+
