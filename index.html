@@ -150,24 +150,6 @@
         </div>
     </div>
 
-    <div class="container">
-        <h2>Solicitar Cotización</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" required>
-            <label for="producto">Producto:</label>
-            <select id="producto" name="producto" required>
-                <option value="Datadash">Datadash</option>
-                <option value="Streamline HR">Streamline HR</option>
-                <option value="Quicksell">Quicksell</option>
-            </select>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
 
     <div class="section section-our-team-freebie">
         <div class="parallax filter filter-color-gold">
@@ -198,8 +180,6 @@
                                                 <p class="small-text">gestion de recursos limitado</p>
                                                 <p class="small-text">Quicksell: </p>
                                                 <p class="small-text">capacidad de listar hasta 50 productos</p>
-						<form id="plan-a-form" class="plan-form" data-plan="basico">
-                                                    <button type="submit" class="btn btn-primary">Seleccionar Plan Básico</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -219,8 +199,6 @@
                                                 <p class="small-text">gestion de recursos ilimitado.</p>
                                                 <p class="small-text">Quicksell: </p>
                                                 <p class="small-text">listar hasta 500 productos con integraciones de pago basicas.</p>
-						<form id="plan-b-form" class="plan-form" data-plan="estandar">
-                                                    <button type="submit" class="btn btn-primary">Seleccionar Plan Estándar</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -240,8 +218,6 @@
                                                 <p class="small-text">gestion avanzada de recursos limitado con beneficios adicionales.</p>
                                                 <p class="small-text">Quicksell: </p>
                                                 <p class="small-text">listar ilimitados productos con integraciones de pago avanzadas.</p>
-						<form id="plan-c-form" class="plan-form" data-plan="pro">
-                                                    <button type="submit" class="btn btn-primary">Seleccionar Plan Pro</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -256,6 +232,66 @@
         </div> 
     </div>
 
+    <div class="container">
+        <h2>Solicitar Cotización</h2>
+        <form>
+            <div id="plans">
+                <div class="plan">
+                    <label for="producto1">Producto:</label>
+                    <select id="producto1" name="producto1">
+                        <option value="">Ninguno</option>
+                        <option value="Datadash">Datadash</option>
+                        <option value="Streamline HR">Streamline HR</option>
+                        <option value="Quicksell">Quicksell</option>
+                    </select>
+                    <label for="plan1">Plan:</label>
+                    <select id="plan1" name="plan1">
+                        <option value="">Ninguno</option>
+                        <option value="basico">Básico</option>
+                        <option value="estandar">Estándar</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" onclick="agregarPlan()">Agregar Plan</button>
+            <br><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        let planCount = 1;
+
+        function agregarPlan() {
+            planCount++;
+            const plansDiv = document.getElementById('plans');
+            const newPlanDiv = document.createElement('div');
+            newPlanDiv.classList.add('plan');
+            newPlanDiv.innerHTML = `
+                <label for="producto${planCount}">Producto:</label>
+                <select id="producto${planCount}" name="producto${planCount}">
+                    <option value="">Ninguno</option>
+                    <option value="Datadash">Datadash</option>
+                    <option value="Streamline HR">Streamline HR</option>
+                    <option value="Quicksell">Quicksell</option>
+                </select>
+                <label for="plan${planCount}">Plan:</label>
+                <select id="plan${planCount}" name="plan${planCount}">
+                    <option value="">Ninguno</option>
+                    <option value="basico">Básico</option>
+                    <option value="estandar">Estándar</option>
+                    <option value="premium">Premium</option>
+                </select>
+            `;
+            plansDiv.appendChild(newPlanDiv);
+        }
+    </script>
 
     <div class="section section-our-team-freebie">
         <div class="parallax filter filter-color-black">
