@@ -232,38 +232,42 @@
         </div> 
     </div>
 
-    <div class="container">
-        <h2>Solicitar Cotización</h2>
-        <form>
-            <div id="plans">
-                <div class="plan">
-                    <label for="producto1">Producto:</label>
-                    <select id="producto1" name="producto1">
-                        <option value="">Ninguno</option>
-                        <option value="Datadash">Datadash</option>
-                        <option value="Streamline HR">Streamline HR</option>
-                        <option value="Quicksell">Quicksell</option>
-                    </select>
-                    <label for="plan1">Plan:</label>
-                    <select id="plan1" name="plan1">
-                        <option value="">Ninguno</option>
-                        <option value="basico">Básico</option>
-                        <option value="estandar">Estándar</option>
-                        <option value="premium">Premium</option>
-                    </select>
+    <div class="section">
+        <div class="container">
+            <h2>Solicitar Cotización</h2>
+            <form>
+                <div id="plans">
+                    <div class="plan">
+                        <label for="producto1">Producto:</label>
+                        <select id="producto1" name="producto1">
+                            <option value="">Ninguno</option>
+                            <option value="Datadash">Datadash</option>
+                            <option value="Streamline HR">Streamline HR</option>
+                            <option value="Quicksell">Quicksell</option>
+                        </select>
+                        <label for="plan1">Plan:</label>
+                        <select id="plan1" name="plan1">
+                            <option value="">Ninguno</option>
+                            <option value="basico">Básico</option>
+                            <option value="estandar">Estándar</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                        <button type="button" onclick="eliminarPlan(this)">Eliminar</button>
+                    </div>
                 </div>
-            </div>
-            <button type="button" onclick="agregarPlan()">Agregar Plan</button>
-            <br><br>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" required>
-            <button type="submit">Enviar</button>
-        </form>
+                <button type="button" onclick="agregarPlan()">Agregar Plan</button>
+                <br><br>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </div>
+    
 
     <script>
         let planCount = 1;
@@ -288,8 +292,14 @@
                     <option value="estandar">Estándar</option>
                     <option value="premium">Premium</option>
                 </select>
+                <button type="button" onclick="eliminarPlan(this)">Eliminar</button>
             `;
             plansDiv.appendChild(newPlanDiv);
+        }
+
+        function eliminarPlan(btn) {
+            const planDiv = btn.parentNode;
+            planDiv.parentNode.removeChild(planDiv);
         }
     </script>
 
