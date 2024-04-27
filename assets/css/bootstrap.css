@@ -121,6 +121,15 @@ textarea {
 button {
   overflow: visible;
 }
+button:hover {
+  background-color: #45a049;
+}
+.plan {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
 button,
 select {
   text-transform: none;
