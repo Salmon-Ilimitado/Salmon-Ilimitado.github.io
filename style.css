@@ -6,7 +6,7 @@
 
 div.galeria {
     margin: 10px auto; /* Centra el contenedor horizontalmente */
-    box-shadow: 0 4px 8px 0 lightskyblue, 0 6px 20px 0 black;
+    box-shadow: 0 4px 8px 0 #ED6347, 0 6px 20px 0 black;
     width: 80%; /* Cambia el ancho del contenedor */
     display: flex; /* Usa flexbox para alinear las imágenes */
     justify-content: center; /* Centra las imágenes horizontalmente */
